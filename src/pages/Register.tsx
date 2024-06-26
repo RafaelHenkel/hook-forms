@@ -6,7 +6,8 @@ function Home() {
   const [username, setUsername] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
-  function handleClick() {
+  function handleClick(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
     alert(`Usuario cadastrado ${username}, ${email}, ${password}`);
 
     setUsername('');
