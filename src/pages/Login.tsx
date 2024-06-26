@@ -5,7 +5,8 @@ import PageDefault from '../components/PageDefault';
 function Home() {
   const [username, setUsername] = useState<string>('');
   const [password, setPassword] = useState<string>('');
-  function handleClick() {
+  function handleClick(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
     alert(`Usuario logado ${username}, ${password}`);
     setUsername('');
     setPassword('');
